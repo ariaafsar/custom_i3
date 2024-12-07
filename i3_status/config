@@ -1,0 +1,81 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "cpu_usage"
+order += "disk /"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "cpu_temperature 0"
+order += "memory"
+order += "load"
+order += "tztime local"
+
+volume master {
+        format = "VOL %volume"
+        format_muted = "VOL muted"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+read_file BRIGHTNESS {
+        format = "BRI %content%"
+        path = "/home/aria/.config/brightness"
+        max_characters = 5
+}
+
+cpu_usage {
+        format= "CPU %usage <%cpu0 %cpu1>"
+        max_threshold= 75
+}
+
+wireless _first_ {
+        format_up = "W (%quality at %essid, %bitrate) %ip"
+        format_down = ""
+}
+
+ethernet _first_ {
+        format_up = "E %ip (%speed)"
+        format_down = ""
+}
+
+#this file gets batter info and shows battery status
+battery all {
+    format = "%status %percentage %remaining"
+    format_down = ""
+    last_full_capacity = true
+    integer_battery_capacity = true
+    low_threshold = 11
+    threshold_type = percentage
+    hide_seconds = true
+    status_chr = " "
+    status_bat = " "
+    status_unk = " "
+    status_full = " "
+}
+
+cpu_temperature 0 {
+	format = " %degrees°C"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
+}
+
+load {
+        format = "%1min %5min %15min"
+}
+
+memory {
+        format = "MEM %percentage_used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+        format = "Disk %percentage_used"
+}

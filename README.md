@@ -3,13 +3,19 @@ this project is my customized i3wm configuration files
 
 there is two main config files
 
-the first one that ou need to add is in i3 directory that you should add it in certain path and ts path is : "~/.config/i3/config"
+the first one that ou need to add is in i3 directory that you should add it in certain path and ts path is : 
+<b>~/.config/i3/config</b>
 
-at first you don't have "i3" directory and you should add it to add this file you can use "sudo vim ~/.config/i3/config" and press enter and you can paist "i3/config" file that i provided you iin this project
+at first you don't have "i3" directory and you should add it to add this file you can use :
+<b>sudo vim ~/.config/i3/config</b> 
+and press enter and you can paist "i3/config" file that i provided you iin this project
 
-to add the second config file you should add another path in your ".confg/" path that is "~/.config/i3status/config"
+to add the second config file you should add another path in your ".confg/" path that is
+<b>~/.config/i3status/config</b>
 
-to add it you can use "sudo vim ~/.config/i3status/config" and paist "i3status/config" that is proviided in project
+to add it you can use : 
+<b>sudo vim ~/.config/i3status/config</b> 
+and paist "i3status/config" that is proviided in project
 
 after adding this two files you need to restart i3 service to restatrt it you can use "mod+shift+R"
 
